@@ -1,5 +1,5 @@
 import { FromTargetProtocol } from "./from-target.protocol";
-import { ValidationFunctionProtocol } from "./validation-function.protocol";
+import { ValidationSpecsProtocol } from "./validation-specs.protocol";
 
 /**
  * @author camolezeVitor
@@ -14,27 +14,19 @@ export interface ValidationProtocol {
      */
     from: FromTargetProtocol
     /**
-     * Attribute used for storaging the error message.
-     */
-    message?: string;
-    /**
      * The validation function.
      */
-    function: ValidationFunctionProtocol;
+    function: Function;
+
+    /**
+     * the specs of the validation
+     */
+    validationSpecs?: ValidationSpecsProtocol;
     /**
      * some validation functions may need some parameters, here's where 
      * we'l store them.
      */
-    functionSpecs: any;
-    /**
-     * you can make your own function when the error is triggered and store
-     * it here.
-     */
-    whenTriggered: () => any;
-    /*
-     *if you would like to storage any value, here's where you can do it.
-     */
-    storage?: any;
+    functionSpecs?: any;
 
 }
 

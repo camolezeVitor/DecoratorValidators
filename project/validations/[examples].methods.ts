@@ -2,4 +2,5 @@ const notNull = (value: any): boolean | Array<boolean> => {
     return value == null ? false : true;
 }
 
-export { notNull };
+export { notNull as notNullMethod };
+

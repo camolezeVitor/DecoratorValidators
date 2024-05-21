@@ -8,6 +8,6 @@ import { NotNull } from "./project/validations/[examples].facade";
 
 class AlunoTest {
 
-    @NotNull
+    @NotNull()
     public name?: string; 
 }

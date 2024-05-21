@@ -16,9 +16,4 @@ export interface FromTargetProtocol {
      * this will storage its name.
      */
     className?: string;
-
-    /**
-     * value from the attribute/function.
-     */
-    actualValue: string;
 }

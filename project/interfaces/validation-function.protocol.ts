@@ -1,4 +1,5 @@
 import { ValidationErrorProtocol } from "./validation-error.protocol";
+import { ValidationProtocol } from "./validation.protocol";
 
 /**
  * @author camolezeVitor
@@ -9,4 +10,7 @@ import { ValidationErrorProtocol } from "./validation-error.protocol";
  * const fn: ValidationFunctionProtocol = () => void;
  * ```
  */
-export type ValidationFunctionProtocol = () => ValidationErrorProtocol | null;
+export type ValidationFunctionProtocol = (
+    validation: ValidationProtocol,
+    validationSpecs?: Object
+) => ValidationErrorProtocol | null;

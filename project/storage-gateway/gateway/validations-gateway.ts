@@ -7,7 +7,7 @@ import { ValidationStorage } from "../storage";
  * @description
  * this class is used for you to save the validations
  */
-export class ValidationGateway implements StorageProtocol {
+export class ValidationStorageGateway implements StorageProtocol {
 
     storageValue(validation: ValidationProtocol) {
         ValidationStorage.storage(validation);

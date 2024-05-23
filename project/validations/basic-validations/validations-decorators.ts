@@ -19,6 +19,7 @@ const storage = (constructor: any, key: string, fn: Function,
 }
 
 namespace BasicValidationsDecorators {
+    
     const NotNull = (validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
@@ -114,3 +115,4 @@ namespace BasicValidationsDecorators {
 }
 
 export { BasicValidationsDecorators };
+

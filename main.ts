@@ -4,11 +4,15 @@
  * this is only a example file, does not include the true project.
  */
 
-import { NotNull } from "./project/validations/basic-validations/validations-decorators";
+import { BVal } from "./project/index";
+
+import("./project/index");
 
 class AlunoTest {
 
-    @NotNull()
+    @BVal.NotNull({
+        message: "Não é possível!!!!"
+    })
     public name?: string;
 
 }

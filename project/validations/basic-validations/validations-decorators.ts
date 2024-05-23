@@ -20,7 +20,7 @@ const storage = (constructor: any, key: string, fn: Function,
 
 namespace BasicValidationsDecorators {
     
-    const NotNull = (validationSpecs?: ValidationSpecsProtocol) => {
+    export const NotNull = (validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -31,7 +31,7 @@ namespace BasicValidationsDecorators {
         }
     }
     
-    const NotBlank = (validationSpecs?: ValidationSpecsProtocol) => {
+    export const NotBlank = (validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -42,7 +42,7 @@ namespace BasicValidationsDecorators {
         }
     }
     
-    const NotUndefined = (validationSpecs?: ValidationSpecsProtocol) => {
+    export const NotUndefined = (validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -53,7 +53,7 @@ namespace BasicValidationsDecorators {
         }
     }
     
-    const Min = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
+    export const Min = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -65,7 +65,7 @@ namespace BasicValidationsDecorators {
         }
     }
     
-    const Max = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
+    export const Max = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -77,7 +77,7 @@ namespace BasicValidationsDecorators {
         }
     }
     
-    const MinLenght = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
+    export const MinLenght = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -89,7 +89,7 @@ namespace BasicValidationsDecorators {
         }
     }
     
-    const MaxLenght = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
+    export const MaxLenght = (specs: number, validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -101,7 +101,7 @@ namespace BasicValidationsDecorators {
         }
     }
     
-    const Pattern = (specs: string | RegExp, validationSpecs?: ValidationSpecsProtocol) => {
+    export const Pattern = (specs: string | RegExp, validationSpecs?: ValidationSpecsProtocol) => {
         return ({constructor}: any, key: string) => {
             storage(
                 constructor,
@@ -114,5 +114,5 @@ namespace BasicValidationsDecorators {
     }
 }
 
-export { BasicValidationsDecorators };
+export { BasicValidationsDecorators as BVal };
 

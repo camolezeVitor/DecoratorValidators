@@ -14,7 +14,8 @@ const storage = (constructor: any, key: string, fn: Function,
         },
         function: fn,
         validationSpecs: validationSpecs,
-        functionSpecs: functionSpecs
+        functionSpecs: functionSpecs,
+        isAsync: (fn as any)[Symbol.toStringTag] == "AsyncFunction"
     })
 }
 

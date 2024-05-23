@@ -10,9 +10,7 @@ import("./project/index");
 
 class AlunoTest {
 
-    @BVal.NotNull({
-        message: "Não é possível!!!!"
-    })
+    @BVal.NotNull()
     @BVal.$Test()
     public name?: string;
 

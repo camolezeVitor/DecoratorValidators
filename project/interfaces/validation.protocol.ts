@@ -18,6 +18,10 @@ export interface ValidationProtocol {
      */
     function: Function;
     /**
+     * if the storaged function is async, this will verify it.
+     */
+    isAsync: boolean;
+    /**
      * the specs of the validation
      */
     validationSpecs?: ValidationSpecsProtocol;
@@ -26,6 +30,5 @@ export interface ValidationProtocol {
      * we'l store them.
      */
     functionSpecs?: any;
-
 }
 

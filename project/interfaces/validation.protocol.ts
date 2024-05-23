@@ -17,7 +17,6 @@ export interface ValidationProtocol {
      * The validation function.
      */
     function: Function;
-
     /**
      * the specs of the validation
      */

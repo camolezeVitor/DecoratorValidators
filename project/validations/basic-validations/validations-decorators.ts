@@ -112,6 +112,17 @@ namespace BasicValidationsDecorators {
             )
         }
     }
+
+    export const $Test = (validationSpecs?: ValidationSpecsProtocol) => {
+        return ({constructor}: any, key: string) => {
+            storage(
+                constructor,
+                key,
+                BasicValidationFns.$test,
+                validationSpecs,
+            )
+        }
+    }
 }
 
 export { BasicValidationsDecorators as BVal };

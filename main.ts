@@ -13,6 +13,7 @@ class AlunoTest {
     @BVal.NotNull({
         message: "Não é possível!!!!"
     })
+    @BVal.$Test()
     public name?: string;
 
 }

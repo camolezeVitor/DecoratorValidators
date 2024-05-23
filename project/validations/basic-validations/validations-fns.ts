@@ -31,5 +31,13 @@ export class BasicValidationFns {
     static pattern(value: any, pattern: string | RegExp) {
         return RegExp(pattern).test(value);
     }
+
+    static async $test(value: any) {
+        return new Promise(() => {
+            setTimeout(() => {
+                
+            }, 2000);
+        })
+    }
     
 }

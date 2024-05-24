@@ -1,5 +1,9 @@
 export class BasicValidationFns {
 
+    static required(value: any): boolean | Array<boolean> {
+        return value ? true : false;
+    }
+
     static notNull(value: any): boolean | Array<boolean> {
         return value != null;
     } 
@@ -12,32 +16,29 @@ export class BasicValidationFns {
         return value != undefined;
     }
 
-    static min(value: number, param: number) {
+    static min(value: number, param: number): boolean | Array<boolean> {
         return value >= param;
     }
 
-    static max(value: number, param: number) {
+    static max(value: number, param: number): boolean | Array<boolean> {
         return value <= param;
     }
 
-    static minLenght(value: string, param: number) {
+    static minLenght(value: string, param: number): boolean | Array<boolean> {
         return value.length >= param;
     }
 
-    static maxLenght(value: string, param: number) {
+    static maxLenght(value: string, param: number): boolean | Array<boolean> {
         return value.length <= param;
     }
 
-    static pattern(value: any, pattern: string | RegExp) {
+    static pattern(value: any, pattern: string | RegExp): boolean | Array<boolean> {
         return RegExp(pattern).test(value);
     }
 
-    static async $test(value: any) {
-        return new Promise(() => {
-            setTimeout(() => {
-                
-            }, 2000);
-        })
+    static prohibitedWords(value: string, param: Array<string>): boolean | Array<boolean> {
+        const prohibitedWordsSet = new Set(param);
+        return value.split(' ').some(word => prohibitedWordsSet.has(word));
     }
     
 }

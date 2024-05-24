@@ -1,4 +1,4 @@
 export interface ValidationErrorProtocol {
-    message: string;
+    message?: string | Array<string>;
     ifErrorTriggered?: () => any;
 }

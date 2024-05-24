@@ -113,6 +113,29 @@ namespace BasicValidationsDecorators {
             )
         }
     }
+
+    export const ProhibitedWords = (specs: string | RegExp, validationSpecs?: ValidationSpecsProtocol) => {
+        return ({constructor}: any, key: string) => {
+            storage(
+                constructor,
+                key,
+                BasicValidationFns.prohibitedWords,
+                validationSpecs,
+                specs
+            )
+        }
+    }
+    export const Required = (validationSpecs?: ValidationSpecsProtocol) => {
+        return ({constructor}: any, key: string) => {
+            storage(
+                constructor,
+                key,
+                BasicValidationFns.required,
+                validationSpecs
+            )
+        }
+    }
+
 }
 
 export { BasicValidationsDecorators as BVal };

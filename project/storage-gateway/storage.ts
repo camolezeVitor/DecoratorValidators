@@ -13,8 +13,6 @@ export class ValidationStorage {
         validationList.push(validations);
 
         this.validationMap.set(validationId, validationList);
-
-        console.log(this.validationMap);
     }
 
     public static getValidations(
